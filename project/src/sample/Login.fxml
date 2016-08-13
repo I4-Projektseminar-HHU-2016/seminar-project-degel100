@@ -13,7 +13,7 @@
          </image>
       </ImageView>
       <Button fx:id="loginButton" layoutX="113.0" layoutY="200.0" mnemonicParsing="false" text="Login" />
-      <Button fx:id="gastButton" layoutX="113.0" layoutY="242.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="52.0" text="Gast" />
+      <Button fx:id="gastButton" layoutX="113.0" layoutY="242.0" mnemonicParsing="false" onAction="#Guest" prefHeight="27.0" prefWidth="52.0" text="Gast" />
       <TextField fx:id="usernameField" layoutX="59.0" layoutY="65.0" text="Benutzername" />
       <TextField fx:id="passwordField" layoutX="59.0" layoutY="107.0" text="Passwort" />
    </children>

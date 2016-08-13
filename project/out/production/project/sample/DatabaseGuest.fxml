@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DatabaseGuestController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="-1.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/databaselogo.jpg" />
+         </image>
+      </ImageView>
+      <TableView layoutX="14.0" layoutY="14.0" prefHeight="229.0" prefWidth="571.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="statisticButton" layoutX="396.0" layoutY="272.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="154.0" text="Medaillenspiegel" />
+      <Button fx:id="startpageButton" layoutX="262.0" layoutY="332.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="101.0" text="Startseite">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="searchButton" layoutX="248.0" layoutY="272.0" mnemonicParsing="false" text="Suchen" />
+      <TextField fx:id="searchField" layoutX="46.0" layoutY="272.0" prefHeight="27.0" prefWidth="193.0" text="Suchbegriff..." />
+   </children>
+</AnchorPane>
