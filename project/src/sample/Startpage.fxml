@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartpageController">
    <children>
       <ImageView fitHeight="242.0" fitWidth="215.0" layoutX="206.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,7 +19,7 @@
             <Image url="@../images/rio-de-janeiro.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="playerButton" layoutX="186.0" layoutY="262.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="234.0" text="Olympische Spieler">
+      <Button fx:id="playerButton" layoutX="186.0" layoutY="262.0" mnemonicParsing="false" onAction="#Start" prefHeight="46.0" prefWidth="234.0" text="Olympische Spieler">
          <font>
             <Font size="16.0" />
          </font>
