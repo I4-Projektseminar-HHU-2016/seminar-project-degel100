@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddPlayerController">
+   <children>
+      <ImageView fitHeight="599.0" fitWidth="512.0" layoutX="-16.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/olympicfire.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="105.0" layoutY="97.0" prefHeight="33.0" prefWidth="141.0" text="Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="160.0" prefHeight="33.0" prefWidth="141.0" text="Geburtstag:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="112.0" layoutY="283.0" prefHeight="33.0" prefWidth="141.0" text="Land:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="221.0" prefHeight="33.0" prefWidth="141.0" text="Sportart:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="346.0" prefHeight="33.0" prefWidth="141.0" text="Medaillen:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="167.0" layoutY="96.0" text="Vorname Nachname">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="birthField" layoutX="167.0" layoutY="159.0" text="TT.MM.JJJJ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="sportfField" layoutX="167.0" layoutY="220.0" text="Sportart">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="countryField" layoutX="167.0" layoutY="282.0" text="Land">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="metalField" layoutX="167.0" layoutY="345.0" text="Medaillen">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addButton" layoutX="165.0" layoutY="481.0" mnemonicParsing="false" text="Hinzufügen">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
