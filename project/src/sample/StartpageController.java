@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import javax.xml.soap.Node;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -35,6 +36,7 @@ public class StartpageController implements Initializable {
             primaryStage.setTitle("Login");
             primaryStage.setScene(scene);
             primaryStage.show();
+            ((javafx.scene.Node)(event.getSource())).getScene().getWindow().hide();
         } catch (IOException e) {
             e.printStackTrace();
         }

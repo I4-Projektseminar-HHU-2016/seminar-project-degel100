@@ -24,7 +24,7 @@
             </columns>
         </TableView>
         <Button fx:id="statisticButton" layoutX="396.0" layoutY="272.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="154.0" text="Medaillenspiegel" />
-        <Button fx:id="startpageButton" layoutX="262.0" layoutY="339.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="101.0" text="Startseite">
+        <Button fx:id="startpageButton" layoutX="262.0" layoutY="339.0" mnemonicParsing="false" onAction="#startpage" prefHeight="38.0" prefWidth="101.0" text="Startseite">
             <font>
                 <Font size="15.0" />
             </font>

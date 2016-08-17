@@ -1,10 +1,14 @@
 package sample;
 
+import com.sun.tools.javadoc.Start;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -20,6 +24,7 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     public SQLConnection sqlconnection;
+    public StartpageController sp;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -30,7 +35,7 @@ public class LoginController implements Initializable {
     private TextField usernameField;
 
     @FXML
-    private TextField passwordField;
+    private PasswordField passwordField;
 
 
 
@@ -48,6 +53,7 @@ public class LoginController implements Initializable {
                 primaryStage.setTitle("Olympische Spieler 2016 - Datenbank");
                 primaryStage.setScene(scene);
                 primaryStage.show();
+                ((Node)(event.getSource())).getScene().getWindow().hide();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -67,6 +73,7 @@ public class LoginController implements Initializable {
             primaryStage.setTitle("Olympische Spieler 2016 - Datenbank");
             primaryStage.setScene(scene);
             primaryStage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
         } catch (IOException e) {
             e.printStackTrace();
         }

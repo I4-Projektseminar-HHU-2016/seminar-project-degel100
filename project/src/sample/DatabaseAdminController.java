@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
@@ -113,6 +114,24 @@ public class DatabaseAdminController implements Initializable {
             primaryStage.setTitle("Spieler hinzufügen");
             primaryStage.setScene(scene);
             primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Startseite Button
+    public void startpage (ActionEvent event){
+
+        try {
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("Startpage.fxml").openStream());
+            Scene scene = new Scene(root);
+
+            primaryStage.setTitle("Olympische Spiele Rio 2016");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
         } catch (IOException e) {
             e.printStackTrace();
         }

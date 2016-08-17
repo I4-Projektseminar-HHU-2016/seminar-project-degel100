@@ -11,12 +11,12 @@
    <children>
       <ImageView fitHeight="242.0" fitWidth="215.0" layoutX="206.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/olympialogo.jpg" />
+            <Image url="/images/olympialogo.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="392.0" fitWidth="600.0" nodeOrientation="INHERIT" opacity="0.19" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/rio-de-janeiro.jpg" />
+            <Image url="/images/rio-de-janeiro.jpg" />
          </image>
       </ImageView>
       <Button fx:id="playerButton" layoutX="186.0" layoutY="262.0" mnemonicParsing="false" onAction="#Start" prefHeight="46.0" prefWidth="234.0" text="Olympische Spieler">

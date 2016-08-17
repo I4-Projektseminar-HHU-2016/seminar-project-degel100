@@ -2,18 +2,25 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
 import java.awt.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /**
  * Created by dennisgelfart on 13.08.16.
@@ -94,6 +101,25 @@ public class DatabaseGuestController implements Initializable{
             e.printStackTrace();
         }
 
+    }
+
+
+    //Startseite Button
+    public void startpage (ActionEvent event){
+
+        try {
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("Startpage.fxml").openStream());
+            Scene scene = new Scene(root);
+
+            primaryStage.setTitle("Olympische Spiele Rio 2016");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
