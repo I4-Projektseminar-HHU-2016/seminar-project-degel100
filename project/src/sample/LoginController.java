@@ -19,6 +19,8 @@ import java.util.ResourceBundle;
  */
 public class LoginController implements Initializable {
 
+    public SQLConnection sqlconnection;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
