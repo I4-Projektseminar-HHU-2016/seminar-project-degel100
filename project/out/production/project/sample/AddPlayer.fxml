@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddPlayerController">
    <children>
       <ImageView fitHeight="599.0" fitWidth="512.0" layoutX="-16.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
@@ -49,7 +48,7 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="sportfField" layoutX="167.0" layoutY="220.0" text="Sportart">
+      <TextField fx:id="sportField" layoutX="167.0" layoutY="220.0" text="Sportart">
          <font>
             <Font size="18.0" />
          </font>
@@ -64,7 +63,7 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="addButton" layoutX="165.0" layoutY="481.0" mnemonicParsing="false" text="Hinzufügen">
+      <Button fx:id="addButton" layoutX="165.0" layoutY="481.0" mnemonicParsing="false" onAction="#addAthlete" text="Hinzufügen">
          <font>
             <Font size="18.0" />
          </font>

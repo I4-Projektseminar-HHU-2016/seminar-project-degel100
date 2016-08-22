@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -59,7 +58,6 @@ public class DatabaseGuestController implements Initializable{
             Class.forName("org.sqlite.JDBC");
             conection = DriverManager.getConnection("jdbc:sqlite:olympics.db");
             conection.setAutoCommit(false);
-            System.out.println("Opened database successfully");
             stmt = conection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Athletes");
 

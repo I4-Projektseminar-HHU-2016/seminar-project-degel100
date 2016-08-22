@@ -14,10 +14,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.channels.AcceptPendingException;
 import java.sql.*;
 import java.util.ResourceBundle;
 
@@ -47,6 +47,8 @@ public class DatabaseAdminController implements Initializable {
 
     @FXML
     private TextField searchField;
+    @FXML
+    private Label noEntry;
 
     private int number = 1;
 
@@ -59,7 +61,6 @@ public class DatabaseAdminController implements Initializable {
             Class.forName("org.sqlite.JDBC");
             conection = DriverManager.getConnection("jdbc:sqlite:olympics.db");
             conection.setAutoCommit(false);
-            System.out.println("Opened database successfully");
             stmt = conection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Athletes");
 
@@ -114,6 +115,8 @@ public class DatabaseAdminController implements Initializable {
             primaryStage.setTitle("Spieler hinzufügen");
             primaryStage.setScene(scene);
             primaryStage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -136,4 +139,54 @@ public class DatabaseAdminController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+    //Suchfunktion
+    public void issearchAthlete(String entry) throws SQLException {
+
+        Statement stmt = null;
+        try {
+
+            Class.forName("org.sqlite.JDBC");
+            conection = DriverManager.getConnection("jdbc:sqlite:olympics.db");
+            conection.setAutoCommit(false);
+            stmt = conection.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Athletes");
+            while ( rs.next() ) {
+
+                if (rs.getString("Name").equals(entry)) {
+
+                    Stage primaryStage = new Stage();
+                    FXMLLoader loader = new FXMLLoader();
+                    Pane root = loader.load(getClass().getResource("DatabaseAdmin.fxml").openStream());
+                    Scene scene = new Scene(root);
+
+                    primaryStage.setTitle("Olympische Spieler 2016 - Datenbank");
+                    primaryStage.setScene(scene);
+                    primaryStage.show();
+
+                } else {
+
+                    noEntry.setText("Sportler nicht enthalten!");
+                }
+
+            }
+            rs.close();
+            stmt.close();
+            conection.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+
+    //Suche-Button
+    public void searchAthlete (ActionEvent event) {
+
+        try {
+            issearchAthlete(searchField.getText());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
