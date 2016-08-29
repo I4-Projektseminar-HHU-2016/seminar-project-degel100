@@ -68,5 +68,6 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" text="Zurück" />
    </children>
 </AnchorPane>

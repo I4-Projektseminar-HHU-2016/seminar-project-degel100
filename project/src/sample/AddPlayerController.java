@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -82,6 +83,23 @@ public class AddPlayerController implements Initializable {
             addtoDatabase(nameField.getText(), birthField.getText(), sportField.getText(), countryField.getText(), metalField.getText());
             ((Node)(event.getSource())).getScene().getWindow().hide();
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goBack(ActionEvent event) {
+
+        try {
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("DatabaseAdmin.fxml").openStream());
+            Scene scene = new Scene(root);
+
+            primaryStage.setTitle("Olympische Spieler 2016 - Datenbank");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
