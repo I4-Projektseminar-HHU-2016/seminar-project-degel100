@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -34,6 +35,9 @@ public class LoginController implements Initializable {
     @FXML
     private PasswordField passwordField;
 
+    @FXML
+    private Label connected;
+
 
 
     //Login Button
@@ -55,6 +59,9 @@ public class LoginController implements Initializable {
                 e.printStackTrace();
             }
 
+        }
+        else {
+            connected.setText("Benutzername oder Passwort falsch!");
         }
     }
 

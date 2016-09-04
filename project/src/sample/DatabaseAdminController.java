@@ -86,6 +86,7 @@ public class DatabaseAdminController implements Initializable {
         }
     }
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -101,8 +102,9 @@ public class DatabaseAdminController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
+
+
     //Spieler hinzufügen Button
     public void addPlayer (ActionEvent event){
 
@@ -121,6 +123,7 @@ public class DatabaseAdminController implements Initializable {
             e.printStackTrace();
         }
     }
+
 
     //Startseite Button
     public void startpage (ActionEvent event){
@@ -179,6 +182,7 @@ public class DatabaseAdminController implements Initializable {
         }
     }
 
+
     //Suche-Button
     public void searchAthlete (ActionEvent event) {
 
@@ -189,4 +193,24 @@ public class DatabaseAdminController implements Initializable {
         }
     }
 
+
+    //Medaillenspiegel-Button
+    public void showStatistic (ActionEvent event) {
+
+        try {
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("Metalbase.fxml").openStream());
+            Scene scene = new Scene(root);
+
+            primaryStage.setTitle("Olympische Spiele 2016 - Medaillenspiegel");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

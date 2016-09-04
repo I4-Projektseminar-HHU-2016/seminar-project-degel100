@@ -121,4 +121,24 @@ public class DatabaseGuestController implements Initializable{
     }
 
 
+    //Medaillenspiegel-Button
+    public void showStatistic (ActionEvent event) {
+
+        try {
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("Metalbase.fxml").openStream());
+            Scene scene = new Scene(root);
+
+            primaryStage.setTitle("Olympische Spiele 2016 - Medaillenspiegel");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
