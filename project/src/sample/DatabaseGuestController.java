@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -46,6 +47,8 @@ public class DatabaseGuestController implements Initializable{
 
     @FXML
     private TextField searchField;
+    @FXML
+    private Label noEntry;
 
     private int number = 1;
 
@@ -136,6 +139,53 @@ public class DatabaseGuestController implements Initializable{
             ((Node)(event.getSource())).getScene().getWindow().hide();
 
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //Suchfunktion
+    public void issearchAthlete(String entry) throws SQLException {
+
+        Statement stmt = null;
+        int row = -1;
+        try {
+
+            Class.forName("org.sqlite.JDBC");
+            conection = DriverManager.getConnection("jdbc:sqlite:olympics.db");
+            conection.setAutoCommit(false);
+            stmt = conection.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Athletes");
+            while ( rs.next() ) {
+
+                row++;
+                if (rs.getString("Name").equals(entry)) {
+                    tablePlayer.scrollTo(row);
+                    //Alternative?
+                    noEntry.setText("");
+                    System.out.println("Name ist drin.");
+                    break;
+
+                } else {
+                    noEntry.setText("Sportler nicht enthalten!");
+                }
+
+            }
+            rs.close();
+            stmt.close();
+            conection.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+
+
+    //Suche-Button
+    public void searchAthlete (ActionEvent event) {
+
+        try {
+            issearchAthlete(searchField.getText());
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

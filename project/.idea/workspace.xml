@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/DatabaseAdminController.class" afterPath="$PROJECT_DIR$/out/production/project/sample/DatabaseAdminController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/DatabaseGuestController.class" afterPath="$PROJECT_DIR$/out/production/project/sample/DatabaseGuestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/LoginController.class" afterPath="$PROJECT_DIR$/out/production/project/sample/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/olympics.db" afterPath="$PROJECT_DIR$/olympics.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/DatabaseAdmin.fxml" afterPath="$PROJECT_DIR$/out/production/project/sample/DatabaseAdmin.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DatabaseAdmin.fxml" afterPath="$PROJECT_DIR$/src/sample/DatabaseAdmin.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/rio-de-janeiro.jpg" afterPath="$PROJECT_DIR$/src/images/rio-de-janeiro.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DatabaseAdminController.java" afterPath="$PROJECT_DIR$/src/sample/DatabaseAdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/DatabaseGuest.fxml" afterPath="$PROJECT_DIR$/out/production/project/sample/DatabaseGuest.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DatabaseGuest.fxml" afterPath="$PROJECT_DIR$/src/sample/DatabaseGuest.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DatabaseGuestController.java" afterPath="$PROJECT_DIR$/src/sample/DatabaseGuestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/Login.fxml" afterPath="$PROJECT_DIR$/out/production/project/sample/Login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Login.fxml" afterPath="$PROJECT_DIR$/src/sample/Login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/LoginController.java" afterPath="$PROJECT_DIR$/src/sample/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Startpage.fxml" afterPath="$PROJECT_DIR$/src/sample/Startpage.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,23 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="66" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DatabaseAdminController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/DatabaseAdminController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="205" column="60" selection-start-line="205" selection-start-column="60" selection-end-line="205" selection-end-column="60" />
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,11 +93,24 @@
       <file leaf-file-name="DatabaseGuestController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/DatabaseGuestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.1180124">
-              <caret line="132" column="60" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.4409938">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseGuest.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/DatabaseGuest.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5172415">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,10 +168,23 @@
         <entry file="file://$PROJECT_DIR$/src/sample/StartpageController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Startpage.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Startpage.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.27586207">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/sample/SQLConnection.java" />
         <option value="$PROJECT_DIR$/src/sample/TablePlayer.java" />
         <option value="$PROJECT_DIR$/src/sample/Login.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Startpage.fxml" />
         <option value="$PROJECT_DIR$/src/sample/DatabaseAdmin.fxml" />
         <option value="$PROJECT_DIR$/src/sample/AddPlayer.fxml" />
         <option value="$PROJECT_DIR$/src/sample/StartpageController.java" />
@@ -229,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/sample/TableMetalLand.java" />
         <option value="$PROJECT_DIR$/src/sample/TableMetal.java" />
         <option value="$PROJECT_DIR$/src/sample/MetalbaseController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Startpage.fxml" />
         <option value="$PROJECT_DIR$/src/sample/DatabaseAdminController.java" />
         <option value="$PROJECT_DIR$/src/sample/DatabaseGuestController.java" />
       </list>
@@ -569,7 +574,7 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="722" extended-state="1" />
+    <frame x="0" y="23" width="1280" height="722" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -633,9 +638,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -722,9 +725,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -811,9 +812,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -940,28 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Startpage.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/DatabaseGuest.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1003,7 +980,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="31" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1012,9 +989,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="66" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,18 +999,6 @@
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/TablePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1051,24 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/TableMetal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/StartpageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MetalbaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1079,10 +1024,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/TableMetal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/TablePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/StartpageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Startpage.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.27586207">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/DatabaseGuest.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5172415">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/DatabaseAdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="205" column="60" selection-start-line="205" selection-start-column="60" selection-end-line="205" selection-end-column="60" />
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1091,8 +1088,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/DatabaseGuestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1180124">
-          <caret line="132" column="60" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.4409938">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

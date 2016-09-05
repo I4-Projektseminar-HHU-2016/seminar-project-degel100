@@ -148,6 +148,7 @@ public class DatabaseAdminController implements Initializable {
     public void issearchAthlete(String entry) throws SQLException {
 
         Statement stmt = null;
+        int row = -1;
         try {
 
             Class.forName("org.sqlite.JDBC");
@@ -157,19 +158,15 @@ public class DatabaseAdminController implements Initializable {
             ResultSet rs = stmt.executeQuery( "SELECT * FROM Athletes");
             while ( rs.next() ) {
 
+                row++;
                 if (rs.getString("Name").equals(entry)) {
-
-                    Stage primaryStage = new Stage();
-                    FXMLLoader loader = new FXMLLoader();
-                    Pane root = loader.load(getClass().getResource("DatabaseAdmin.fxml").openStream());
-                    Scene scene = new Scene(root);
-
-                    primaryStage.setTitle("Olympische Spieler 2016 - Datenbank");
-                    primaryStage.setScene(scene);
-                    primaryStage.show();
+                    tablePlayer.scrollTo(row);
+                    //Alternative?
+                    noEntry.setText("");
+                    System.out.println("Name ist drin.");
+                    break;
 
                 } else {
-
                     noEntry.setText("Sportler nicht enthalten!");
                 }
 

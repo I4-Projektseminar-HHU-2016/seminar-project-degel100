@@ -9,12 +9,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="341.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartpageController">
    <children>
-      <ImageView fitHeight="242.0" fitWidth="215.0" layoutX="206.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="242.0" fitWidth="215.0" layoutX="206.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false">
          <image>
             <Image url="/images/olympialogo.jpg" />
          </image>
+         <effect>
+            <DropShadow height="30.36" radius="66.2875" width="236.79" />
+         </effect>
       </ImageView>
-      <ImageView fitHeight="392.0" fitWidth="600.0" nodeOrientation="INHERIT" opacity="0.19" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="431.0" fitWidth="600.0" nodeOrientation="INHERIT" opacity="0.38" pickOnBounds="true" preserveRatio="true" smooth="false">
          <image>
             <Image url="/images/rio-de-janeiro.jpg" />
          </image>
