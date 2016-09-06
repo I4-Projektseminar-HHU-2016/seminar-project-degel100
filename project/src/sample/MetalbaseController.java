@@ -8,9 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -46,6 +44,22 @@ public class MetalbaseController implements Initializable{
     @FXML
     private RadioButton athleteButton;
 
+    @FXML
+    private Button searchCountryButton;
+
+    @FXML
+    private Button searchSportButton;
+
+    @FXML
+    private Button searchAthleteButton;
+
+
+    @FXML
+    private TextField searchField;
+
+    @FXML
+    private Label Entry;
+
     private int number = 1;
 
 
@@ -63,6 +77,13 @@ public class MetalbaseController implements Initializable{
             athleteButton.setSelected(false);
             criteria.setText("Land");
             number = 1;
+
+            searchSportButton.setVisible(false);
+            searchAthleteButton.setVisible(false);
+            Entry.setText("");
+
+            searchCountryButton.setVisible(true);
+            searchField.setText("Land...");
 
             //Tabelle anlegen
             final ObservableList<TableMetal> data = FXCollections.observableArrayList(
@@ -102,6 +123,13 @@ public class MetalbaseController implements Initializable{
             criteria.setText("Sportart");
             number = 1;
 
+            searchCountryButton.setVisible(false);
+            searchAthleteButton.setVisible(false);
+            Entry.setText("");
+
+            searchSportButton.setVisible(true);
+            searchField.setText("Sportart...");
+
             //Tabelle anlegen
             final ObservableList<TableMetal> data = FXCollections.observableArrayList(
             );
@@ -139,6 +167,13 @@ public class MetalbaseController implements Initializable{
             athleteButton.setSelected(true);
             criteria.setText("Sportler");
             number = 1;
+
+            searchCountryButton.setVisible(false);
+            searchSportButton.setVisible(false);
+            Entry.setText("");
+
+            searchAthleteButton.setVisible(true);
+            searchField.setText("Sportler...");
 
             //Tabelle anlegen
             final ObservableList<TableMetal> data = FXCollections.observableArrayList(
@@ -180,19 +215,7 @@ public class MetalbaseController implements Initializable{
     //Zurück-Button
     public void goBack(ActionEvent event) {
 
-        try {
-            Stage primaryStage = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            Pane root = loader.load(getClass().getResource("DatabaseAdmin.fxml").openStream());
-            Scene scene = new Scene(root);
-
-            primaryStage.setTitle("Olympische Spieler 2016 - Datenbank");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-            ((Node)(event.getSource())).getScene().getWindow().hide();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ((Node)(event.getSource())).getScene().getWindow().hide();
     }
 
 
@@ -201,10 +224,12 @@ public class MetalbaseController implements Initializable{
 
         try {
             fillTableMetalLand();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
 
     //Sporart-Button
     public void sortSport (ActionEvent event) {
@@ -216,11 +241,144 @@ public class MetalbaseController implements Initializable{
         }
     }
 
+    
     //Sportler-Button
     public void sortAthlete (ActionEvent event) {
 
         try {
             fillTableMetalAthlete();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //Suchfunktion-Auswahl "Land"
+    public void issearchCountry(String entry) throws SQLException {
+
+        Statement stmt = null;
+        int row = 0;
+        try {
+
+            Class.forName("org.sqlite.JDBC");
+            conection = DriverManager.getConnection("jdbc:sqlite:olympics.db");
+            conection.setAutoCommit(false);
+            stmt = conection.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM CountryMetal");
+            while ( rs.next() ) {
+
+                row++;
+                if (rs.getString("Land").equals(entry)) {
+                    Entry.setText(entry + ", Nr." + String.valueOf(row));
+                    break;
+
+                } else {
+                    Entry.setText("Land nicht enthalten!");
+                }
+
+            }
+            rs.close();
+            stmt.close();
+            conection.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+
+
+    //Suche-Button "Land"
+    public void searchCountry (ActionEvent event) {
+
+        try {
+            issearchCountry(searchField.getText());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //Suchfunktion-Auswahl "Sportart"
+    public void issearchSport(String entry) throws SQLException {
+
+        Statement stmt = null;
+        int row = 0;
+        try {
+
+            Class.forName("org.sqlite.JDBC");
+            conection = DriverManager.getConnection("jdbc:sqlite:olympics.db");
+            conection.setAutoCommit(false);
+            stmt = conection.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM SportMetal");
+            while ( rs.next() ) {
+
+                row++;
+                if (rs.getString("Sportart").equals(entry)) {
+                    Entry.setText(entry + ", Nr." + String.valueOf(row));
+                    break;
+
+                } else {
+                    Entry.setText("Sportart nicht enthalten!");
+                }
+
+            }
+            rs.close();
+            stmt.close();
+            conection.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+
+
+    //Suche-Button "Sportart"
+    public void searchSport (ActionEvent event) {
+
+        try {
+            issearchSport(searchField.getText());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //Suchfunktion-Auswahl "Sportler"
+    public void issearchAthlete(String entry) throws SQLException {
+
+        Statement stmt = null;
+        int row = 0;
+        try {
+
+            Class.forName("org.sqlite.JDBC");
+            conection = DriverManager.getConnection("jdbc:sqlite:olympics.db");
+            conection.setAutoCommit(false);
+            stmt = conection.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM AthleteMetal");
+            while ( rs.next() ) {
+
+                row++;
+                if (rs.getString("Name").equals(entry)) {
+                    Entry.setText(entry + ", Nr." + String.valueOf(row));
+                    break;
+
+                } else {
+                    Entry.setText("Sportler nicht enthalten!");
+                }
+
+            }
+            rs.close();
+            stmt.close();
+            conection.close();
+        } catch ( Exception e ) {
+            System.err.println(e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+
+
+    //Suche-Button "Sportler"
+    public void searchAthlete (ActionEvent event) {
+
+        try {
+            issearchAthlete(searchField.getText());
         } catch (SQLException e) {
             e.printStackTrace();
         }

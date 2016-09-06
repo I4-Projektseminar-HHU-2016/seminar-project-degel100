@@ -148,7 +148,7 @@ public class DatabaseAdminController implements Initializable {
     public void issearchAthlete(String entry) throws SQLException {
 
         Statement stmt = null;
-        int row = -1;
+        int row = 0;
         try {
 
             Class.forName("org.sqlite.JDBC");
@@ -160,10 +160,7 @@ public class DatabaseAdminController implements Initializable {
 
                 row++;
                 if (rs.getString("Name").equals(entry)) {
-                    tablePlayer.scrollTo(row);
-                    //Alternative?
-                    noEntry.setText("");
-                    System.out.println("Name ist drin.");
+                    noEntry.setText(entry+", Nr."+String.valueOf(row));
                     break;
 
                 } else {
@@ -204,7 +201,43 @@ public class DatabaseAdminController implements Initializable {
             primaryStage.setScene(scene);
             primaryStage.show();
 
-            ((Node)(event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //Profil anzeigen-Button
+    public void showPlayer (ActionEvent event) {
+
+        try {
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("Profile.fxml").openStream());
+            Scene scene = new Scene(root);
+
+            primaryStage.setTitle("SPIELERNAME - Profil");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //Spieler löschen-Button
+    public void goDelete(ActionEvent event){
+
+        try {
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("Delete.fxml").openStream());
+            Scene scene = new Scene(root);
+
+            primaryStage.setTitle("Spieler löschen");
+            primaryStage.setScene(scene);
+            primaryStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
