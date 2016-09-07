@@ -243,4 +243,23 @@ public class DatabaseAdminController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+    //Update-Button
+    public void updateScene (ActionEvent event) {
+
+        try {
+            Stage primaryStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = loader.load(getClass().getResource("DatabaseAdmin.fxml").openStream());
+            Scene scene = new Scene(root);
+
+            primaryStage.setTitle("Olympische Spieler 2016 - Datenbank");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

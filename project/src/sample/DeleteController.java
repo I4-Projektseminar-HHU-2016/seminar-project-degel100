@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -54,19 +55,6 @@ public class DeleteController implements Initializable {
             conection.commit();
             conection.close();
             ((Node)(event.getSource())).getScene().getWindow().hide();
-            try {
-                Stage primaryStage = new Stage();
-                FXMLLoader loader = new FXMLLoader();
-                Pane root = loader.load(getClass().getResource("DatabaseAdmin.fxml").openStream());
-                Scene scene = new Scene(root);
-
-                primaryStage.setTitle("Olympische Spieler 2016 - Datenbank");
-                primaryStage.setScene(scene);
-                primaryStage.show();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());

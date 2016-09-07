@@ -43,7 +43,7 @@ public class LoginController implements Initializable {
     //Login Button
     public void Login (ActionEvent event){
 
-        if (String.valueOf(usernameField.getText()).equals("gast") && String.valueOf(passwordField.getText()).equals("gast"))
+        if (String.valueOf(usernameField.getText()).equals("Nutzer") && String.valueOf(passwordField.getText()).equals("Zugang"))
         {
             try {
                 Stage primaryStage = new Stage();

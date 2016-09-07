@@ -241,7 +241,7 @@ public class MetalbaseController implements Initializable{
         }
     }
 
-    
+
     //Sportler-Button
     public void sortAthlete (ActionEvent event) {
 

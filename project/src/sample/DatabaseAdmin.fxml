@@ -13,14 +13,14 @@
                 <Image url="/images/databaselogo.jpg" />
             </image>
         </ImageView>
-        <TableView fx:id="tablePlayer" layoutX="14.0" layoutY="14.0" prefHeight="229.0" prefWidth="571.0">
+        <TableView fx:id="tablePlayer" layoutX="14.0" layoutY="14.0" prefHeight="229.0" prefWidth="502.0">
             <columns>
                 <TableColumn fx:id="id" prefWidth="37.0" text="Nr." />
-                <TableColumn fx:id="name" prefWidth="145.0" text="Name" />
-            <TableColumn fx:id="birth" prefWidth="104.0" text="Geburtstag" />
-            <TableColumn fx:id="sport" prefWidth="94.0" text="Sportart" />
-            <TableColumn fx:id="country" prefWidth="95.0" text="Land" />
-            <TableColumn fx:id="metal" prefWidth="95.0" text="Medaillen" />
+                <TableColumn fx:id="name" prefWidth="142.0" text="Name" />
+            <TableColumn fx:id="birth" prefWidth="84.0" text="Geburtstag" />
+            <TableColumn fx:id="sport" prefWidth="100.0" text="Sportart" />
+            <TableColumn fx:id="country" prefWidth="54.0" text="Land" />
+            <TableColumn fx:id="metal" prefWidth="84.0" text="Medaillen" />
             </columns>
         </TableView>
         <Button fx:id="statisticButton" layoutX="396.0" layoutY="293.0" mnemonicParsing="false" onAction="#showStatistic" prefHeight="27.0" prefWidth="154.0" text="Medaillenspiegel" />
@@ -38,5 +38,6 @@
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Label>
+      <Button layoutX="525.0" layoutY="115.0" mnemonicParsing="false" onAction="#updateScene" text="Update" />
     </children>
 </AnchorPane>
