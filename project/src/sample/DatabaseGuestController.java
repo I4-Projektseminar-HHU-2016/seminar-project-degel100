@@ -14,10 +14,7 @@ import java.util.ResourceBundle;
 
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -50,6 +47,8 @@ public class DatabaseGuestController implements Initializable{
     @FXML
     private Label noEntry;
 
+    @FXML
+    private Button profileButton;
     private int number = 1;
 
 
@@ -88,6 +87,8 @@ public class DatabaseGuestController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        profileButton.setVisible(false);
 
         id.setCellValueFactory(new PropertyValueFactory<TablePlayer, Integer>("ROWID"));
         name.setCellValueFactory(new PropertyValueFactory<TablePlayer, String>("NAME"));
@@ -160,10 +161,12 @@ public class DatabaseGuestController implements Initializable{
                 row++;
                 if (rs.getString("Name").equals(entry)) {
                     noEntry.setText(entry + ", Nr." + String.valueOf(row));
+                    profileButton.setVisible(true);
                     break;
 
                 } else {
                     noEntry.setText("Sportler nicht enthalten!");
+                    profileButton.setVisible(false);
                 }
 
             }
@@ -187,20 +190,54 @@ public class DatabaseGuestController implements Initializable{
     }
 
 
+    //Profil anlegen
+    public void isCreateProfile(String entry) throws SQLException {
+
+        Statement stmt = null;
+        try {
+
+            Class.forName("org.sqlite.JDBC");
+            conection = DriverManager.getConnection("jdbc:sqlite:olympics.db");
+            conection.setAutoCommit(false);
+            stmt = conection.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Athletes");
+            while ( rs.next() ) {
+                if (rs.getString("Name").equals(entry)) {
+                    try {
+                        Stage primaryStage = new Stage();
+                        FXMLLoader loader = new FXMLLoader();
+                        Pane root = loader.load(getClass().getResource("Profile.fxml").openStream());
+                        ProfileController pController = loader.getController();
+                        pController.fillProfile(rs.getString("Name"), rs.getString("Geburtstag"), rs.getString("Land"), rs.getString("Sportart"), rs.getString("Medaillen"));
+                        Scene scene = new Scene(root);
+
+                        primaryStage.setTitle(entry+" - Profil");
+                        primaryStage.setScene(scene);
+                        primaryStage.show();
+                        break;
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                } else {
+                }
+            }
+            rs.close();
+            stmt.close();
+            conection.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+
+
     //Profil anzeigen-Button
     public void showPlayer (ActionEvent event) {
 
         try {
-            Stage primaryStage = new Stage();
-            FXMLLoader loader = new FXMLLoader();
-            Pane root = loader.load(getClass().getResource("Profile.fxml").openStream());
-            Scene scene = new Scene(root);
-
-            primaryStage.setTitle("SPIELERNAME - Profil");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-
-        } catch (IOException e) {
+            isCreateProfile(searchField.getText());
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ProfileController">
    <children>
       <ImageView fitHeight="198.0" fitWidth="195.0" layoutX="115.0" layoutY="181.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
@@ -41,27 +40,27 @@
       </Label>
       <Label fx:id="nameLabel" layoutX="185.0" layoutY="76.0" prefHeight="26.0" prefWidth="201.0">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="birthLabel" layoutX="185.0" layoutY="165.0" prefHeight="26.0" prefWidth="201.0">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="countryLabel" layoutX="185.0" layoutY="252.0" prefHeight="26.0" prefWidth="201.0">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="sportLabel" layoutX="185.0" layoutY="343.0" prefHeight="26.0" prefWidth="201.0">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Label>
       <Label fx:id="metalLabel" layoutX="185.0" layoutY="431.0" prefHeight="26.0" prefWidth="201.0">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Label>
    </children>
