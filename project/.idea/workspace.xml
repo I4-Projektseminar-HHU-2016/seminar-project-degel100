@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/olympics Kopie 2.db" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/DatabaseAdminController.class" afterPath="$PROJECT_DIR$/out/production/project/sample/DatabaseAdminController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/DatabaseGuestController.class" afterPath="$PROJECT_DIR$/out/production/project/sample/DatabaseGuestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/ProfileController.class" afterPath="$PROJECT_DIR$/out/production/project/sample/ProfileController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/AddPlayer.fxml" afterPath="$PROJECT_DIR$/out/production/project/sample/AddPlayer.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AddPlayer.fxml" afterPath="$PROJECT_DIR$/src/sample/AddPlayer.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Database.java" afterPath="$PROJECT_DIR$/src/sample/Database.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DatabaseAdminController.java" afterPath="$PROJECT_DIR$/src/sample/DatabaseAdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DatabaseGuestController.java" afterPath="$PROJECT_DIR$/src/sample/DatabaseGuestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project/sample/Metalbase.fxml" afterPath="$PROJECT_DIR$/out/production/project/sample/Metalbase.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Metalbase.fxml" afterPath="$PROJECT_DIR$/src/sample/Metalbase.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Profile.fxml" afterPath="$PROJECT_DIR$/src/sample/Profile.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/ProfileController.java" afterPath="$PROJECT_DIR$/src/sample/ProfileController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/Login.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/Login2.png" afterPath="" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,7 +78,7 @@
       <file leaf-file-name="Profile.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Profile.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="18.827587">
+            <state vertical-scroll-proportion="0.0">
               <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding />
             </state>
@@ -103,7 +91,7 @@
       <file leaf-file-name="DatabaseGuestController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/DatabaseGuestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7894737">
+            <state vertical-scroll-proportion="0.6411043">
               <caret line="224" column="13" selection-start-line="224" selection-start-column="13" selection-end-line="224" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -257,7 +245,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="722" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -287,8 +275,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,24 +292,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -356,7 +326,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -578,7 +548,7 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="722" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="726" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -589,7 +559,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46248084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4611872" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921875" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
@@ -1050,7 +1020,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Profile.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.827587">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding />
         </state>
@@ -1081,7 +1051,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/DatabaseGuestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7894737">
+        <state vertical-scroll-proportion="0.6411043">
           <caret line="224" column="13" selection-start-line="224" selection-start-column="13" selection-end-line="224" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1095,10 +1065,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>project:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
