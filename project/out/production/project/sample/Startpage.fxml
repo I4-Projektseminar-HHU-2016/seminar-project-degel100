@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="242.0" fitWidth="215.0" layoutX="206.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false">
          <image>
-            <Image url="/images/olympialogo.jpg" />
+            <Image url="/images/olympialogo.png" />
          </image>
          <effect>
             <DropShadow height="30.36" radius="66.2875" width="236.79" />

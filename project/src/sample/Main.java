@@ -6,6 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
+/*  Folgenden Basis-Code, welchen ich jeweils in den meisten Unterklassen für die Erstellung einer JavaFX-Applikation
+    verwendet habe, habe ich dem Video-Tutorial von ProgrammingKnowledge entnommen.
+    Link: https://www.youtube.com/watch?v=nTm1rzhHOc8&index=2&list=PLS1QulWo1RIbqOzdu1jShN0xah41S6lLP
+ */
+
 public class Main extends Application {
 
     @Override
